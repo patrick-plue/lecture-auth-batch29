@@ -1,0 +1,31 @@
+@host = http://localhost:8000
+
+###Request 1
+GET {{host}}/route1
+
+### Request 2
+GET {{host}}/route2
+
+### Request 3
+GET {{host}}/route3
+
+###Request 4
+POST {{host}}/set-token 
+Content-Type: application/json
+
+{
+    "user": {
+        "name": "Charles",
+        "age": 60,
+        "role": "admin"
+    }
+}
+
+###Request 5
+GET {{host}}/get-token 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2hhcmxlcyIsImFnZSI6NjAsInJvbGUiOiJndWVzdCIsImlhdCI6MTY2MjUzODc3NSwiZXhwIjoxNjYyNTQwNTc1fQ.77apB5SyGmyTMscCjQZDRzGOjxDorVlAVLfbUnr_NkY
+
+### Request 6
+DELETE  {{host}}/user 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2hhcmxlcyIsImFnZSI6NjAsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MjUzOTAwNSwiZXhwIjoxNjYyNTQwODA1fQ.snqEKM7kHZOvxVJv21wYgeNYiuwBHxgQ-06bzWLQAw4
+
